@@ -20,13 +20,23 @@ body {
   align-items: center;
   padding: 0 20px 40px 20px;
   box-shadow: 0 10px 60px hsl(238, 29%, 16%);
+}
+.img-container {
   position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.img-container--box {
+  width: 100%;
+  text-align: center;
 }
 .header-background {
   width: 70%;
   position: absolute;
   top: 0;
-  /* left: 0; */
+  left: 50%;
+  transform: translateX(-50%);
 }
 .card-img__header {
   width: 70%;
@@ -44,6 +54,7 @@ body {
 .card-header {
   font-size: 2rem;
   font-weight: 700;
+  text-align: center;
 }
 .section-header {
   display: flex;
@@ -54,11 +65,40 @@ body {
   cursor: pointer;
   color: hsl(14, 88%, 65%);
 }
+
 .img-arrow {
   width: 12px;
   height: 8px;
   transform: rotate(180deg);
 }
+@media (min-width: 1200px) {
+  .card {
+    flex-direction: row;
+  }
+  .card-img__header {
+    content: url(./images/illustration-woman-online-desktop.svg);
+    position: absolute;
+    left: -16%;
+    width: 95%;
+    z-index: 2;
+  }
+  .header-background {
+    content: url(./images/bg-pattern-desktop.svg);
+    position: absolute;
+    left: 30%;
+    top: -180px;
+    width: 95%;
+    z-index: 1;
+  }
+  .card-img__header--box {
+    content: url(./images/illustration-box-desktop.svg);
+    position: absolute;
+    left: -25%;
+    z-index: 3;
+    width: 30%;
+  }
+}
+
 .hidden {
   display: none;
 }
